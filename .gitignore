@@ -1,0 +1,7 @@
+*.mrc
+*.tif
+*.raw
+*.bin
+*.dv
+*.png
+temp/
