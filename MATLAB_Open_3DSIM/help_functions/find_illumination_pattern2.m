@@ -93,7 +93,7 @@ for I = 1:dataparams.numangles
     
     params.Dir(I).px = -peak.kx;
     params.Dir(I).py = -peak.ky;
-    params.Dir(I).phaOff=-phase(p1);
+    params.Dir(I).phaOff=unwrap(angle(p1)) %-phase(p1);
     
     Temp_m1 = abs(p1);
     Temp_m2 = abs(p2);
