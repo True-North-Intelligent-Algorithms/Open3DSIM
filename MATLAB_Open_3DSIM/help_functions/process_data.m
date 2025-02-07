@@ -1,4 +1,4 @@
-function [dataparams,freq,ang,pha,module0,sum_fft] = process_data(dataparams,rawpixelsize,NA,refmed,refcov,refimm,exwavelength,emwavelength,fwd,depth,notchwidthxy1,notchdips1,notchwidthxy2,notchdips2,OTFflag,OTF_name,num_taper,attenuation)
+function [dataparams,freq,ang,pha,module0,sum_fft,sum_fft_0] = process_data(dataparams,rawpixelsize,NA,refmed,refcov,refimm,exwavelength,emwavelength,fwd,depth,notchwidthxy1,notchdips1,notchwidthxy2,notchdips2,OTFflag,OTF_name,num_taper,attenuation)
 
 %% Get some parameter
 dataparams.rawpixelsize = rawpixelsize;
@@ -189,9 +189,11 @@ end
 
 %% Sum of 0,¡À1,¡À2 frequency domain
 sum_fft = zeros(Nx,Ny,numfocus);
+sum_fft_0 = zeros(Nx, Ny, numfocus);
 for jangle = 1:numangles
     for jstep = 1:numsteps
         sum_fft = sum_fft + squeeze(fftimagefirst(:,:,jstep,:,1,1,jangle));
+        sum_fft_0 = sum_fft_0 + squeeze(dataparams.originfft(:,:,jstep,:,1,1,jangle));
     end
 end
 
