@@ -106,7 +106,7 @@ if dataparams.Nz~=1
 if OTFflag == 1
     [OTFem,~] = get_modelOTF(dataparams,SIMparams);
 elseif OTFflag == 0
-    [~,OTFem]= get_calibrationOTF(OTF_name,SIMparams,numpixelsx,numpixelsy,dataparams.rawpixelsize);
+    [~,OTFem]= get_rawcalibrationOTF(OTF_name,SIMparams,numpixelsx,numpixelsy,dataparams.rawpixelsize);
 end
 else
     OTFem = SimOtfProvider2( dataparams,SIMparams,NA,emwavelength,numSIMpixelsx,1);
