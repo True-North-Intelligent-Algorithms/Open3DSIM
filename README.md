@@ -1,6 +1,24 @@
 # Open3DSIM
-This code was created by Ruijie Cao and Prof. Peng Xi in Peking University for 3D super-resolution structure illumination microscopy reconstruction. 
-We are devoted to make the SIM community open and constructive. And we will continue to improve the platform.
+
+This code was forked by Brian Northan of True North Intelligent Algorithms and James Seyforth of Howard Hughes institute. 
+
+We have made some small change to make it easier to compare to [simrecon](https://github.com/True-North-Intelligent-Algorithms/simrecon).
+
+This code was originall created by Ruijie Cao and Prof. Peng Xi in Peking University for 3D super-resolution structure illumination microscopy reconstruction. 
+They are devoted to make the SIM community open and constructive. And we will continue to improve the platform.
+
+# Running the code
+
+Start by running the Matlab script [Open_3DSIM](https://github.com/True-North-Intelligent-Algorithms/Open3DSIM/blob/master/MATLAB_Open_3DSIM/Open_3DSIM.m)  
+First you may need to convert raw SIM data so it is organized right.  Run the [prepareforopen3DSIM notebook](https://github.com/True-North-Intelligent-Algorithms/simrecon/blob/main/notebooks/sandbox/prepareforopen3DSIM.ipynb) from the [tnia simreoon](https://github.com/True-North-Intelligent-Algorithms/simrecon/tree/main).  
+
+You may need to change the aquisition parameters [here](https://github.com/True-North-Intelligent-Algorithms/Open3DSIM/blob/master/MATLAB_Open_3DSIM/Open_3DSIM.m#L66).
+
+You can change notch filter parameters [here](https://github.com/True-North-Intelligent-Algorithms/Open3DSIM/blob/master/MATLAB_Open_3DSIM/Open_3DSIM.m#L98).  
+
+You can change frequency filter parameters [here](https://github.com/True-North-Intelligent-Algorithms/Open3DSIM/blob/master/MATLAB_Open_3DSIM/Open_3DSIM.m#L142)  
+
+# Original Open3DSIM Notes from Ruijie Cao and Prof. Peng Xi
 
 1. We provide the pure source code of three platforms of Open-3DSIM, including MATLAB, Fiji, and Exe.
 2. The whole code files of three platforms can be downloaded from tags in this resposity.
