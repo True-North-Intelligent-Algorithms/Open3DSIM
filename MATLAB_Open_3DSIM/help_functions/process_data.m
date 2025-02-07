@@ -79,6 +79,20 @@ disp(['    parameter of dir1 is: freq=',num2str(sqrt(freq(1,1,1,1)^2+freq(2,1,1,
 disp(['    parameter of dir2 is: freq=',num2str(sqrt(freq(1,1,1,2)^2+freq(2,1,1,2)^2)),', ang=',num2str(ang(1,1,1,2)),', pha=',num2str(pha(1,1,1,2)),', module1=',num2str(dataparams.allmodule(2,1,1,2)),', module2=',num2str(dataparams.allmodule(4,1,1,2))]);
 disp(['    parameter of dir3 is: freq=',num2str(sqrt(freq(1,1,1,3)^2+freq(2,1,1,3)^2)),', ang=',num2str(ang(1,1,1,3)),', pha=',num2str(pha(1,1,1,3)),', module1=',num2str(dataparams.allmodule(2,1,1,3)),', module2=',num2str(dataparams.allmodule(4,1,1,3))]);
 
+cyclesPerMicron = double(1./(dataparams.numpixelsx*dataparams.rawpixelsize(1)*0.001));
+freqMicron(1)=sqrt(freq(1,1,1,1)^2+freq(2,1,1,1)^2)*cyclesPerMicron;
+freqMicron(2)=sqrt(freq(1,1,1,2)^2+freq(2,1,1,2)^2)*cyclesPerMicron;
+freqMicron(3)=sqrt(freq(1,1,1,3)^2+freq(2,1,1,3)^2)*cyclesPerMicron;
+
+angRads(1)=pi*ang(1,1,1,1)/180;
+angRads(2)=pi*ang(1,1,1,2)/180;
+angRads(3)=pi*ang(1,1,1,3)/180;
+
+disp(['    parameter of dir1 in microns is: freq=',num2str(freqMicron(1)),', ang=',num2str(angRads(1)),', pha=',num2str(pha(1,1,1,1)),', module1=',num2str(dataparams.allmodule(2,1,1,1)),', module2=',num2str(dataparams.allmodule(4,1,1,1))]);
+disp(['    parameter of dir2 in microns is: freq=',num2str(freqMicron(2)),', ang=',num2str(angRads(2)),', pha=',num2str(pha(1,1,1,2)),', module1=',num2str(dataparams.allmodule(2,1,1,2)),', module2=',num2str(dataparams.allmodule(4,1,1,2))]);
+disp(['    parameter of dir3 in microns is: freq=',num2str(freqMicron(3)),', ang=',num2str(angRads(3)),', pha=',num2str(pha(1,1,1,3)),', module1=',num2str(dataparams.allmodule(2,1,1,3)),', module2=',num2str(dataparams.allmodule(4,1,1,3))]);
+
+
 if allmodule(2)<0.2
     allmodule(2) = 0.2;
     allmodule(3) = 0.2;
