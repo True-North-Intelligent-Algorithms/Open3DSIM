@@ -7,6 +7,18 @@ We have made some small change to make it easier to compare to [simrecon](https:
 This code was originall created by Ruijie Cao and Prof. Peng Xi in Peking University for 3D super-resolution structure illumination microscopy reconstruction. 
 They are devoted to make the SIM community open and constructive. And we will continue to improve the platform.
 
+# Pre-requisites
+
+## Bioformats Matlab
+
+Get ```bfmatlab``` from [here](https://docs.openmicroscopy.org/bio-formats/6.3.1/users/matlab/index.html)
+
+Put the ```bfmatlab``` folder in the ```MATLAB_Open_3DSIM/lib/``` folder. 
+
+## Diplib
+
+Get ```diplib``` from [here](https://diplib.org/).  Put the ```diplib``` folder in the ```MATLAB_Open_3DSIM/lib/``` folder.
+
 # Running the code
 
 Start by running the Matlab script [Open_3DSIM](https://github.com/True-North-Intelligent-Algorithms/Open3DSIM/blob/master/MATLAB_Open_3DSIM/Open_3DSIM.m)  
