@@ -2,7 +2,11 @@
 
 This code was forked by Brian Northan of True North Intelligent Algorithms and James Seyforth of Howard Hughes institute. 
 
-We have made some small change to make it easier to compare to [simrecon](https://github.com/True-North-Intelligent-Algorithms/simrecon).
+We have made some small change to make it easier to compare to [simrecon](https://github.com/True-North-Intelligent-Algorithms/simrecon).  
+
+For example in the original ```Open3DSim``` an absolute value operator was applied at the end of the filtering stage [here](https://github.com/Cao-ruijie/Open3DSIM/blob/master/MATLAB_Open_3DSIM/help_functions/filter_3D.m#L15).  
+
+In our version we output the reconstruction without ```abs``` applied (see [here](https://github.com/True-North-Intelligent-Algorithms/Open3DSIM/blob/master/MATLAB_Open_3DSIM/help_functions/filter_3D.m#L16)) to have a fairer comparison with other methods.  
 
 This code was originall created by Ruijie Cao and Prof. Peng Xi in Peking University for 3D super-resolution structure illumination microscopy reconstruction. 
 They are devoted to make the SIM community open and constructive. And we will continue to improve the platform.
